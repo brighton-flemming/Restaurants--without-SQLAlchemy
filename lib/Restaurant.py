@@ -6,6 +6,7 @@ class Restaurant:
         self.review_id = review_id
         self.restaurant_id = restaurant_id
         self.customer_id = customer_id
+        self.reviews = []
 
     def name(self,restaurant_name):
         restaurant_name = self._name
@@ -22,6 +23,14 @@ class Restaurant:
         review_list.append(Review.all())
         return review_list
     
+    def average_star_rating(self):
+        if not self.reviews:
+            return 0
+        
+        total_rating = sum(review.rating for review in self.reviews)
+        average_rating = total_rating / len(self.reviews)
+        return average_rating
+    
 reviews_data = [
     Restaurant.customers(1, "restaurant_A, customer_1"),
      Restaurant.customers(2, "restaurant_B, customer_2"),
@@ -29,7 +38,18 @@ reviews_data = [
        Restaurant.customers(4, "restaurant_D, customer_4"),
         Restaurant.customers(5, "restaurant_E, customer_5"),
 ]
+
     
+restaurants_data = [
+   Restaurant("restaurant_A","Restaurant A"),
+   Restaurant("restaurant_B","Restaurant B"),
+   Restaurant("restaurant_C","Restaurant C"),
+   Restaurant("restaurant_D","Restaurant D"),
+   Restaurant("restaurant_E","Restaurant E"),
+]
+
+avg_rating = restaurants_data[0].average_star_rating()
+print(f"Average Rating for {restaurants_data[0].name} : {avg_rating:.2f}")
 
    
         

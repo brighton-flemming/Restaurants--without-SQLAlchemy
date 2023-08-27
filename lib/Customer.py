@@ -53,7 +53,6 @@ class Customer:
           else:
              return None
        
-       
     
     def restaurants(self):
        reviewed_restaurants = set(review.restaurant.name for review in self.reviews)
