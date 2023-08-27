@@ -18,4 +18,7 @@ class Customer:
         return person_name
     
     def all(self):
-       return all(Customer.full_name)
+       customer_list = []
+       customer = self.full_name
+       customer_list.append(customer)
+       return customer_list
