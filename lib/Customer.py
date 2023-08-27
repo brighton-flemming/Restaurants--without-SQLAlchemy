@@ -2,6 +2,8 @@ from Review import Review
 from Restaurant import Restaurant
 
 class Customer:
+    all_customers = []
+
     def __init__(self, first_naame, family_name):
      self._first_name = first_naame
      self._family_name = family_name
@@ -9,8 +11,7 @@ class Customer:
      Customer.all_customers.append(self)
 
     def given_name(self):
-       given_name = self._first_name
-       return given_name
+       return self._first_name
      
     def family_name(self):
       return self._family_name
@@ -19,12 +20,12 @@ class Customer:
        self._family_name = new_family_name
 
     def full_name(self, person_name):
-        person_name = print(f"{self.given_name}  {self.family_name}")
+        person_name = print(f"{self.given_name()}  {self.family_name()}")
         return person_name
     
     def all(self):
        customer_list = []
-       customer = self.full_name
+       customer = self.full_name()
        customer_list.append(customer)
        return customer_list
     
@@ -35,23 +36,21 @@ class Customer:
        restaurant.reviews.append(review)
 
     def num_reviews(self):
-       return self.reviews
+       return len(self.reviews)
     
     @classmethod
     def find_by_name(cls, name):
        for customer in cls.all_customers:
           if customer.name == name:
              return customer
-          else:
-             return None
+       return None
           
     @classmethod
     def find_by_family_name(cls,family_name):
        for customer in cls.all_customers:
           if customer.family_name == family_name:
              return customer
-          else:
-             return None
+       return None
        
     
     def restaurants(self):
@@ -67,11 +66,11 @@ restaurants_data = [
 ]
 
 customers_data = [
-   Customer("customer_1", "Customer 1"),
-    Customer("customer_2", "Customer 2"),
-     Customer("customer_3", "Customer 3"),
-      Customer("customer_4", "Customer 4"),
-       Customer("customer_5", "Customer 5"),
+   Customer("Customer", "1"),
+    Customer("Customer", "2"),
+     Customer("Customer", "3"),
+      Customer("Customer", "4"),
+       Customer("Customer", "5"),
 ]
 
 customers_data[0].add_review(restaurants_data[3], 4)
