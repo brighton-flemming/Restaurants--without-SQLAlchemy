@@ -27,17 +27,3 @@ class Review:
     def get_restaurant(self):
         return self.restaurant
     
-# customer_instance =  Customer("customer_id","John Doe")
-# restaurant_instance = Restaurant("restaurant_id", "Restaurant_A")
-# review_instance = Review(customer_instance, restaurant_instance, 4)
-
-# rating = review_instance.get_rating()
-# print("Rating: ", rating)
-
-# all_ratings = review_instance.get_all_ratings()
-# print("All Ratings: ", all_ratings)
-
-# customer = review_instance.get_customer()
-# restaurant = review_instance.get_restaurant()
-# print("Customer: ", customer)
-# print("Restaurant: ", restaurant)
