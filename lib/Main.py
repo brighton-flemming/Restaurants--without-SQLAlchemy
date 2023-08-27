@@ -20,6 +20,10 @@ if __name__ == "__main__":
     customer2.add_review(restaurant2, 2)
     customer3.add_review(restaurant3, 4)
 
+    for customer in Customer.all_customers:
+        num_reviews = customer.num_reviews()
+        print(f"{customer.get_full_name()} has authored {num_reviews} review(s).")
+
   
     print(f"{customer1.get_full_name()} has reviewed:")
     for restaurant in customer1.restaurants():
@@ -45,9 +49,19 @@ if __name__ == "__main__":
     for customer in restaurant2.get_customers():
         print(f"- {customer.get_full_name()}")
 
-
     print(f"Average rating for {restaurant2.name}: {restaurant2.average_star_rating()}")
     print(f"Average rating for {restaurant1.name}: {restaurant1.average_star_rating()}")
     print(f"Average rating for {restaurant3.name}: {restaurant3.average_star_rating()}")
+     
+    found_customers = Customer.find_by_family_name("Bean")
+    if found_customers:
+        print("Found customers:")
+        for customer in found_customers:
+            print(f"- {customer.full_name()}")
+    else:
+        print("No customers found")
+
+
+ 
 
 

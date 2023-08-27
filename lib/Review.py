@@ -1,5 +1,4 @@
-# from Customer import Customer
-# from Restaurant import Restaurant
+
 
 class Review:
     all_reviews = []
