@@ -58,6 +58,18 @@ for review in reviews_data:
 avg_rating_A = restaurant_A.average_star_rating()
 print(f"Average Rating for {restaurant_A.get_name} : {avg_rating_A:.2f}")
 
+avg_rating_B = restaurant_B.average_star_rating()
+print(f"Average Rating for {restaurant_B.get_name} : {avg_rating_B:.2f}")
+
+avg_rating_C = restaurant_C.average_star_rating()
+print(f"Average Rating for {restaurant_C.get_name} : {avg_rating_C:.2f}")
+
+avg_rating_D = restaurant_D.average_star_rating()
+print(f"Average Rating for {restaurant_D.get_name} : {avg_rating_D:.2f}")
+
+avg_rating_E = restaurant_E.average_star_rating()
+print(f"Average Rating for {restaurant_E.get_name} : {avg_rating_E:.2f}")
+
    
         
 
