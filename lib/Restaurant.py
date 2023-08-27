@@ -1,20 +1,23 @@
 
 # from Review import Review
 class Restaurant:
-    def __init__(self, name, restaurant_id):
+    all_restaurants = []
+
+    def __init__(self, name):
         self.name = str(name)
-        self.restaurant_id = restaurant_id
+        # self.restaurant_id = restaurant_id
         self.reviews = []
+        Restaurant.all_restaurants.append(self)
 
     def get_name(self):
         return self.name
     
     def get_customers(self):
-        unique_customers = set(review.customer_id for review in self.reviews)
+        unique_customers = set(review.customer for review in self.reviews)
         return list(unique_customers)
     
-    def __str__(self):
-        return f" {self.get_name()}"
+    # def __str__(self):
+    #     return f" {self.get_name()}"
 
     def get_reviews(self):
         return self.reviews
