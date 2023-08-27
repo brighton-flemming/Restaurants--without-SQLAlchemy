@@ -6,6 +6,7 @@ class Customer:
      self._first_name = first_naame
      self._family_name = family_name
      self.reviews = []
+     Customer.all_customers.append(self)
 
     def given_name(self):
        given_name = self._first_name
@@ -35,6 +36,23 @@ class Customer:
 
     def num_reviews(self):
        return self.reviews
+    
+    @classmethod
+    def find_by_name(cls, name):
+       for customer in cls.all_customers:
+          if customer.name == name:
+             return customer
+          else:
+             return None
+          
+    @classmethod
+    def find_by_family_name(cls,family_name):
+       for customer in cls.all_customers:
+          if customer.family_name == family_name:
+             return customer
+          else:
+             return None
+       
        
     
     def restaurants(self):
