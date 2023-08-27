@@ -37,10 +37,10 @@ print(customers_data[4].restaurants())
 
 reviews_data = [
     Review("customer_1", "restaurant_A", 4),
-    Review("customer_2", "restaurant_A", 5),
-    Review("customer_3", "restaurant_A", 3),
-    Review("customer_4", "restaurant_A", 2),
-    Review("customer_5", "restaurant_A", 5)
+    Review("customer_2", "restaurant_C", 5),
+    Review("customer_3", "restaurant_E", 3),
+    Review("customer_4", "restaurant_B", 2),
+    Review("customer_5", "restaurant_D", 5)
 ]
 
 restaurant_A = restaurants_data[0]
@@ -50,15 +50,15 @@ restaurant_D = restaurants_data[3]
 restaurant_E = restaurants_data[4]
 
 for review in reviews_data:
-    if review.restaurant_id == "restaurant_A":
+    if review.restaurant == "restaurant_A":
         restaurant_A.reviews.append(review)
-    elif review.restaurant_id == "restaurant_B":
+    elif review.restaurant == "restaurant_B":
          restaurant_B.reviews.append(review)
-    elif review.restaurant_id == "restaurant_C":
+    elif review.restaurant == "restaurant_C":
          restaurant_C.reviews.append(review)
-    elif review.restaurant_id == "restaurant_D":
+    elif review.restaurant == "restaurant_D":
          restaurant_D.reviews.append(review)
-    elif review.restaurant_id == "restaurant_E":
+    elif review.restaurant == "restaurant_E":
          restaurant_E.reviews.append(review)
       
 avg_rating_A = restaurant_A.average_star_rating()

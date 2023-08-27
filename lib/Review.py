@@ -3,24 +3,24 @@
 
 class Review:
     def __init__(self, customer, restaurant, rating) :
-        self._customer =  customer
+        self.customer =  customer
         self.restaurant = restaurant
-        self._rating = int(rating)
+        self.rating = int(rating)
 
     def get_rating(self):
-        return self._rating
+        return self.rating
     
     def get_all_ratings(self):
         rating_list = []
-        rating = self._rating
+        rating = self.rating
         rating_list.append(rating)
         return rating_list
     
     def get_customer(self):
-        return self._customer
+        return self.customer
     
     def get_restaurant(self):
-        return self._restaurant
+        return self.restaurant
     
 # customer_instance =  Customer("customer_id","John Doe")
 # restaurant_instance = Restaurant("restaurant_id", "Restaurant_A")

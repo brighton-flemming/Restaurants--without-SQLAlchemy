@@ -7,7 +7,7 @@ class Restaurant:
         self.reviews = []
 
     def get_name(self):
-        return self._name
+        return self.name
     
     def get_customers(self):
         unique_customers = set(review.customer_id for review in self.reviews)
