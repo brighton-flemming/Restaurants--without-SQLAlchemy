@@ -60,6 +60,13 @@ if __name__ == "__main__":
             print(f"- {customer.get_full_name()}")
     else:
         print("No customers found")
+     
+    print("Find Customers:")
+    found_customer = Customer.find_by_name("Jane Smith")
+    if found_customer:
+        print(f"Found customer: {found_customer.get_full_name()}")
+    else:
+        print("Customer not found")
 
 
  
