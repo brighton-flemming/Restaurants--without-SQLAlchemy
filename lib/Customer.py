@@ -19,9 +19,13 @@ class Customer:
     def change_family_name(self, new_family_name):
        self.family_name = new_family_name
 
+
     def get_full_name(self, person_name):
         person_name = print(f"{self.get_given_name()}  {self.get_family_name()}")
         return person_name
+    
+    def __str__(self):
+       return f" {self.get_given_name()} {self.get_family_name()}"
     
     def all(self):
        customer_list = []

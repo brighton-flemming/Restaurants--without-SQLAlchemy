@@ -76,17 +76,33 @@ print(f"Average Rating for {restaurant_D.get_name()} : {avg_rating_D:.2f}")
 avg_rating_E = restaurant_E.average_star_rating()
 print(f"Average Rating for {restaurant_E.get_name()} : {avg_rating_E:.2f}")
 
-customer_instance =  Customer("customer_id","John Doe")
-restaurant_instance = Restaurant("restaurant_id", "Restaurant_A")
-review_instance = Review(customer_instance, restaurant_instance, 4)
+customer_instance1 =  Customer("customer_id","Donald Bean")
+restaurant_instance1 = Restaurant("restaurant_id", "Restaurant_A")
+review_instance1 = Review(customer_instance1, restaurant_instance1, 4)
 
-rating = review_instance.get_rating()
+rating = review_instance1.get_rating()
 print("Rating: ", rating)
 
-all_ratings = review_instance.get_all_ratings()
+all_ratings = review_instance1.get_all_ratings()
 print("All Ratings: ", all_ratings)
 
-customer = review_instance.get_customer()
-restaurant = review_instance.get_restaurant()
-print("Customer: ", customer)
-print("Restaurant: ", restaurant)
+customer = review_instance1.get_customer()
+restaurant = review_instance1.get_restaurant()
+print(f"Customer: {customer}")
+print(f"Restaurant:  {restaurant}")
+
+customer_instance2 =  Customer("customer_id","Mary Franklin")
+restaurant_instance2 = Restaurant("restaurant_id", "Restaurant_D")
+review_instance2 = Review(customer_instance2, restaurant_instance2, 3)
+
+rating = review_instance2.get_rating()
+print("Rating: ", rating)
+
+all_ratings = review_instance2.get_all_ratings()
+print("All Ratings: ", all_ratings)
+
+customer = review_instance2.get_customer()
+restaurant = review_instance2.get_restaurant()
+print(f"Customer: {customer}")
+print(f"Restaurant:  {restaurant}")
+
