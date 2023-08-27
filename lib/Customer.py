@@ -31,9 +31,9 @@ class Customer:
        return len(self.reviews)
     
     @classmethod
-    def find_by_name(cls, name):
+    def find_by_name(cls, first_name):
        for customer in cls.all_customers:
-          if customer.name == name:
+          if customer.first_name == first_name:
              return customer
        return None
           

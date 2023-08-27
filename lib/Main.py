@@ -62,7 +62,7 @@ if __name__ == "__main__":
         print("No customers found")
      
     print("Find Customers:")
-    found_customer = Customer.find_by_name("Jane Smith")
+    found_customer = Customer.find_by_name("Jane")
     if found_customer:
         print(f"Found customer: {found_customer.get_full_name()}")
     else:
