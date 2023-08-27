@@ -13,7 +13,13 @@ class Restaurant:
     
     def customers(restaurant_id, reviews):
         restaurant_reviews = [review for review in reviews if review.restaurant_id == restaurant_id]
-    
+        unique_customers = set(reviews.customer_id for review in restaurant_reviews)
+
+        return list(unique_customers)
+
+
+
+
     def reviews(self):
         review_list = []
         review_list.append(Review.all())
