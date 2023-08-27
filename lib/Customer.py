@@ -1,5 +1,5 @@
 from Review import Review
-# from Restaurant import Restaurant
+
 
 class Customer:
     all_customers = []
@@ -16,28 +16,27 @@ class Customer:
     def get_family_name(self):
       return self.family_name
      
-    def change_family_name(self, new_family_name):
-       self.family_name = new_family_name
+   #  def change_family_name(self, new_family_name):
+   #     self.family_name = new_family_name
 
 
     def get_full_name(self, person_name):
-        person_name = print(f"{self.get_given_name()}  {self.get_family_name()}")
-        return person_name
+        return f"{self.get_given_name()}  {self.get_family_name()}"
+         
     
-    def __str__(self):
-       return f" {self.get_given_name()} {self.get_family_name()}"
+   #  def __str__(self):
+   #     return f" {self.get_given_name()} {self.get_family_name()}"
     
     def all(self):
-       customer_list = []
-       customer = self.get_full_name()
-       customer_list.append(customer)
-       return customer_list
+      return Customer.all_customers
     
     def add_review(self, restaurant, rating):
-       review_id = len(self.reviews) + 1
-       review = Review(review_id, restaurant, rating)
-       self.reviews.append(review)
-       restaurant.reviews.append(review)
+      #  review_id = len(self.reviews) + 1
+      #  review = Review(review_id, restaurant, rating)
+      #  self.reviews.append(review)
+      #  restaurant.reviews.append(review)
+      review = Review(self, restaurant, rating)
+      self.reviews.append(review)
 
     def num_reviews(self):
        return len(self.reviews)
@@ -58,6 +57,6 @@ class Customer:
        
     
     def restaurants(self):
-       reviewed_restaurants = set(review.restaurant.name for review in self.reviews)
+       reviewed_restaurants = set(review.restaurant for review in self.reviews)
        return list(reviewed_restaurants)
     
