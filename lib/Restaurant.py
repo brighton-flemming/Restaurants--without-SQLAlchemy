@@ -17,14 +17,20 @@ class Restaurant:
 
         return list(unique_customers)
 
-
-
-
     def reviews(self):
         review_list = []
         review_list.append(Review.all())
         return review_list
     
+reviews_data = [
+    Restaurant.customers(1, "restaurant_A, customer_1"),
+     Restaurant.customers(2, "restaurant_B, customer_2"),
+      Restaurant.customers(3, "restaurant_C, customer_3"),
+       Restaurant.customers(4, "restaurant_D, customer_4"),
+        Restaurant.customers(5, "restaurant_E, customer_5"),
+]
+    
+
    
         
 
