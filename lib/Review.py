@@ -19,11 +19,7 @@ class Review:
     def all(cls):
         return Review.all_reviews
     
-    # def get_all_ratings(self):
-    #     rating_list = []
-    #     rating = self.rating
-    #     rating_list.append(rating)
-    #     return rating_list
+  
     
     def get_customer(self):
         return self.customer

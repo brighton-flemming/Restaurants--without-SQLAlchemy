@@ -5,7 +5,6 @@ class Restaurant:
 
     def __init__(self, name):
         self.name = str(name)
-        # self.restaurant_id = restaurant_id
         self.reviews = []
         Restaurant.all_restaurants.append(self)
 
@@ -16,8 +15,7 @@ class Restaurant:
         unique_customers = set(review.customer for review in self.reviews)
         return list(unique_customers)
     
-    # def __str__(self):
-    #     return f" {self.get_name()}"
+  
 
     def get_reviews(self):
         return self.reviews
