@@ -57,7 +57,7 @@ if __name__ == "__main__":
     if found_customers:
         print("Found customers:")
         for customer in found_customers:
-            print(f"- {customer.full_name()}")
+            print(f"- {customer.get_full_name()}")
     else:
         print("No customers found")
 

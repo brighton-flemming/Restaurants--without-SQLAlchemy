@@ -40,11 +40,8 @@ class Customer:
           
     @classmethod
     def find_by_family_name(cls,family_name):
-       for customer in cls.all_customers:
-          if customer.family_name == family_name:
-             return customer
-       return None
-       
+    
+       return [customer for customer in cls.all_customers if customer.family_name == family_name]
     
     def restaurants(self):
        reviewed_restaurants = set(review.restaurant for review in self.reviews)
