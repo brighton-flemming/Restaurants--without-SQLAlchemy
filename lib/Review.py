@@ -1,3 +1,6 @@
+
+from Customer import Customer
+from Restaurant import Restaurant
 class Review:
     def __init__(self, customer, restaurant, rating) :
         self._customer =  customer
@@ -12,3 +15,12 @@ class Review:
         rating = self._rating
         rating_list.append(rating)
         return rating_list
+    
+    def customer(self):
+        self._customer = Customer
+        return self._customer
+    
+    def restaurant(self):
+        self._restaurant = Restaurant
+        return self._restaurant
+    
