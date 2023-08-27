@@ -4,8 +4,8 @@ from Review import Review
 class Customer:
     all_customers = []
 
-    def __init__(self, first_naame, family_name):
-     self.first_name = first_naame
+    def __init__(self, first_name, family_name):
+     self.first_name = first_name
      self.family_name = family_name
      self.reviews = []
      Customer.all_customers.append(self)
@@ -57,35 +57,3 @@ class Customer:
        reviewed_restaurants = set(review.restaurant.name for review in self.reviews)
        return list(reviewed_restaurants)
     
-# restaurants_data = [
-#    Restaurant("restaurant_A","Restaurant A"),
-#    Restaurant("restaurant_B","Restaurant B"),
-#    Restaurant("restaurant_C","Restaurant C"),
-#    Restaurant("restaurant_D","Restaurant D"),
-#    Restaurant("restaurant_E","Restaurant E"),
-# ]
-
-# customers_data = [
-#    Customer("Customer", "1"),
-#     Customer("Customer", "2"),
-#      Customer("Customer", "3"),
-#       Customer("Customer", "4"),
-#        Customer("Customer", "5"),
-# ]
-
-# customers_data[0].add_review(restaurants_data[3], 4)
-# customers_data[3].add_review(restaurants_data[1], 3)
-# customers_data[4].add_review(restaurants_data[2], 1)
-# customers_data[1].add_review(restaurants_data[4], 2)
-# customers_data[2].add_review(restaurants_data[0], 5)
-# customers_data[0].add_review(restaurants_data[1], 4)
-# customers_data[0].add_review(restaurants_data[4], 1)
-# customers_data[2].add_review(restaurants_data[2], 3)
-# customers_data[1].add_review(restaurants_data[3], 2)
-# customers_data[2].add_review(restaurants_data[0], 5)
-
-# print(customers_data[0].restaurants())
-# print(customers_data[1].restaurants())
-# print(customers_data[2].restaurants())
-# print(customers_data[3].restaurants())
-# print(customers_data[4].restaurants())
