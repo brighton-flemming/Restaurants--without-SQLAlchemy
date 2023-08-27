@@ -2,19 +2,28 @@
 # from Restaurant import Restaurant
 
 class Review:
+    all_reviews = []
+
     def __init__(self, customer, restaurant, rating) :
         self.customer =  customer
         self.restaurant = restaurant
-        self.rating = int(rating)
+        self.rating = rating
+        Review.all_reviews.append(self)
+        customer.reviews.append(self)
+        restaurant.reviews.append(self)
 
     def get_rating(self):
         return self.rating
     
-    def get_all_ratings(self):
-        rating_list = []
-        rating = self.rating
-        rating_list.append(rating)
-        return rating_list
+    @classmethod
+    def all(cls):
+        return Review.all_reviews
+    
+    # def get_all_ratings(self):
+    #     rating_list = []
+    #     rating = self.rating
+    #     rating_list.append(rating)
+    #     return rating_list
     
     def get_customer(self):
         return self.customer

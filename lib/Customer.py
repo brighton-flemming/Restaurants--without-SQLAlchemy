@@ -1,6 +1,5 @@
 from Review import Review
 
-
 class Customer:
     all_customers = []
 
@@ -16,25 +15,16 @@ class Customer:
     def get_family_name(self):
       return self.family_name
      
-   #  def change_family_name(self, new_family_name):
-   #     self.family_name = new_family_name
-
-
-    def get_full_name(self, person_name):
+ 
+    def get_full_name(self):
         return f"{self.get_given_name()}  {self.get_family_name()}"
          
-    
-   #  def __str__(self):
-   #     return f" {self.get_given_name()} {self.get_family_name()}"
+   
     
     def all(self):
       return Customer.all_customers
     
     def add_review(self, restaurant, rating):
-      #  review_id = len(self.reviews) + 1
-      #  review = Review(review_id, restaurant, rating)
-      #  self.reviews.append(review)
-      #  restaurant.reviews.append(review)
       review = Review(self, restaurant, rating)
       self.reviews.append(review)
 
