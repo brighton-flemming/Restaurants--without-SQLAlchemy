@@ -15,7 +15,6 @@ class Restaurant:
         unique_customers = set(review.customer for review in self.reviews)
         return list(unique_customers)
     
-  
 
     def get_reviews(self):
         return self.reviews

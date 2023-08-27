@@ -19,8 +19,6 @@ class Review:
     def all(cls):
         return Review.all_reviews
     
-  
-    
     def get_customer(self):
         return self.customer
     
