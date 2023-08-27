@@ -129,7 +129,7 @@ from Customer import Customer
 
 if __name__ == "__main__":
     # Create customers
-    customer1 = Customer("John", "Doe")
+    customer1 = Customer("Donald", "Bean")
     customer2 = Customer("Jane", "Smith")
 
     # Create restaurants
@@ -148,10 +148,10 @@ if __name__ == "__main__":
     for restaurant in customer1.restaurants():
         print(f"- {restaurant.name}")
 
-    print(f"{restaurant1.name()} has been reviewed by:")
-    for customer in restaurant1.customers():
+    print(f"{restaurant1.name} has been reviewed by:")
+    for customer in restaurant1.get_customers():
         print(f"- {customer.get_full_name()}")
 
-    print(f"Average rating for {restaurant2.name()}: {restaurant2.average_star_rating()}")
+    print(f"Average rating for {restaurant2.name}: {restaurant2.average_star_rating()}")
 
 
